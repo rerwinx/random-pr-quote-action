@@ -1,0 +1,13 @@
+name: 'Hello World'
+description: 'Add a random quote to a PR'
+inputs:
+  something:  
+    description: 'something'
+    required: false
+    default: 'something'
+outputs:
+  quote: # id of output
+    description: 'The random quote'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
