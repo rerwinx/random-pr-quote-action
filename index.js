@@ -4,7 +4,9 @@ const github = require('@actions/github');
 try {
 //  const something = core.getInput('something');
 // console.log(`Hello ${something}!`);
-  const quote = ("My Quote");
+  const url = https://api.quotable.io/random
+  var response = fetch(url);
+  const quote = response.content;
   core.setOutput("quote", quote);
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
